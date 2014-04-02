@@ -26,11 +26,12 @@
       <file leaf-file-name="analytics.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/analytics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="44" selection-start="6912" selection-end="6912" vertical-scroll-proportion="-15.038462" vertical-offset="2244" max-vertical-offset="3094">
+            <state line="150" column="54" selection-start="6717" selection-end="6717" vertical-scroll-proportion="-10.153846" vertical-offset="2286" max-vertical-offset="3094">
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,8 +40,10 @@
       <file leaf-file-name="analytics.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/analytics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="35" selection-start="950" selection-end="950" vertical-scroll-proportion="-11.769231" vertical-offset="255" max-vertical-offset="1309">
-              <folding />
+            <state line="48" column="40" selection-start="1353" selection-end="1353" vertical-scroll-proportion="-13.653846" vertical-offset="461" max-vertical-offset="1309">
+              <folding>
+                <element signature="n#project_budgets#0;n#Analytics#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,7 +51,7 @@
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="0" selection-start="5909" selection-end="5909" vertical-scroll-proportion="-7.8461537" vertical-offset="2652" max-vertical-offset="5661">
+            <state line="168" column="0" selection-start="5909" selection-end="5909" vertical-scroll-proportion="16.807692" vertical-offset="3293" max-vertical-offset="5661">
               <folding />
             </state>
           </provider>
@@ -63,28 +66,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commons_model.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="commons_model.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/commons_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="5" selection-start="2609" selection-end="2609" vertical-scroll-proportion="-20.26923" vertical-offset="527" max-vertical-offset="1751">
+            <state line="56" column="1" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.38562092" vertical-offset="563" max-vertical-offset="1649">
               <folding>
-                <marker date="1396429542554" expanded="true" signature="360:412" placeholder="SELECT name ..counties..." />
-                <marker date="1396429542554" expanded="true" signature="2339:2579" placeholder="SELECT SUM( ..projects..." />
-                <marker date="1396429542554" expanded="true" signature="2638:2763" placeholder="------------..." />
+                <element signature="n#save#0;n#Commons_model#0;n#!!top" expanded="false" />
+                <element signature="n#project_totals#0;n#Commons_model#0;n#!!top" expanded="false" />
+                <marker date="1396449061757" expanded="true" signature="360:412" placeholder="SELECT name ..counties..." />
+                <marker date="1396449061757" expanded="true" signature="2605:2845" placeholder="SELECT SUM( ..projects..." />
+                <marker date="1396449061757" expanded="true" signature="2904:3029" placeholder="------------..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer_two.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="footer_two.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/layout/footer_two.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="33" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.6944444" vertical-offset="748" max-vertical-offset="1547">
+            <state line="89" column="6" selection-start="3040" selection-end="3040" vertical-scroll-proportion="-2.9230769" vertical-offset="876" max-vertical-offset="1598">
               <folding>
-                <element signature="e#1927#2430#0" expanded="false" />
-                <element signature="e#3054#3906#0" expanded="false" />
-                <element signature="e#3980#5007#0" expanded="false" />
-                <marker date="1396444422404" expanded="false" signature="1414:1429" placeholder="..." />
+                <element signature="e#1962#2465#0" expanded="false" />
+                <element signature="e#2504#3039#0" expanded="false" />
+                <element signature="e#3663#4515#0" expanded="false" />
+                <element signature="e#4589#5616#0" expanded="false" />
+                <marker date="1396446696519" expanded="false" signature="1414:1429" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -93,16 +99,16 @@
       <file leaf-file-name="mycharts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets2/js/mycharts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="33" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1377">
+            <state line="72" column="28" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="1581">
               <folding>
                 <element signature="n#!!block;n#drawchart#0" expanded="false" />
                 <element signature="n#!!block;n#budget_chart#0" expanded="false" />
-                <marker date="1396444366377" expanded="true" signature="1099:1113" placeholder="..." />
-                <marker date="1396444366377" expanded="true" signature="1184:1214" placeholder="..." />
-                <marker date="1396444366377" expanded="true" signature="1268:1277" placeholder="..." />
-                <marker date="1396444366377" expanded="true" signature="3569:3583" placeholder="..." />
-                <marker date="1396444366377" expanded="true" signature="3654:3684" placeholder="..." />
-                <marker date="1396444366377" expanded="true" signature="3738:3747" placeholder="..." />
+                <marker date="1396446730358" expanded="true" signature="1099:1113" placeholder="..." />
+                <marker date="1396446730358" expanded="true" signature="1184:1214" placeholder="..." />
+                <marker date="1396446730358" expanded="true" signature="1268:1277" placeholder="..." />
+                <marker date="1396446730358" expanded="true" signature="4058:4072" placeholder="..." />
+                <marker date="1396446730358" expanded="true" signature="4143:4173" placeholder="..." />
+                <marker date="1396446730358" expanded="true" signature="4227:4236" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -145,12 +151,12 @@
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/assets2/css/bootstrap/bootstrap.css" />
         <option value="$PROJECT_DIR$/application/controllers/register.php" />
-        <option value="$PROJECT_DIR$/application/models/commons_model.php" />
-        <option value="$PROJECT_DIR$/application/views/analytics.php" />
         <option value="$PROJECT_DIR$/application/controllers/search.php" />
         <option value="$PROJECT_DIR$/application/controllers/analytics.php" />
-        <option value="$PROJECT_DIR$/assets2/js/mycharts.js" />
         <option value="$PROJECT_DIR$/application/views/layout/footer_two.php" />
+        <option value="$PROJECT_DIR$/assets2/js/mycharts.js" />
+        <option value="$PROJECT_DIR$/application/views/analytics.php" />
+        <option value="$PROJECT_DIR$/application/models/commons_model.php" />
       </list>
     </option>
   </component>
@@ -231,6 +237,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="county" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="county" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,7 +383,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -580,20 +604,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/analytics.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="44" selection-start="6912" selection-end="6912" vertical-scroll-proportion="-15.038462" vertical-offset="2244" max-vertical-offset="3094">
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="962" column="9" selection-start="30821" selection-end="30821" vertical-scroll-proportion="0.34768212" vertical-offset="16144" max-vertical-offset="18734">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="0" selection-start="5909" selection-end="5909" vertical-scroll-proportion="-7.8461537" vertical-offset="2652" max-vertical-offset="5661">
+        <state line="168" column="0" selection-start="5909" selection-end="5909" vertical-scroll-proportion="16.807692" vertical-offset="3293" max-vertical-offset="5661">
           <folding />
         </state>
       </provider>
@@ -605,55 +625,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/commons_model.php">
+    <entry file="file://$PROJECT_DIR$/application/views/layout/footer_two.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="5" selection-start="2609" selection-end="2609" vertical-scroll-proportion="-20.26923" vertical-offset="527" max-vertical-offset="1751">
+        <state line="89" column="6" selection-start="3040" selection-end="3040" vertical-scroll-proportion="-2.9230769" vertical-offset="876" max-vertical-offset="1598">
           <folding>
-            <marker date="1396429542554" expanded="true" signature="360:412" placeholder="SELECT name ..counties..." />
-            <marker date="1396429542554" expanded="true" signature="2339:2579" placeholder="SELECT SUM( ..projects..." />
-            <marker date="1396429542554" expanded="true" signature="2638:2763" placeholder="------------..." />
+            <element signature="e#1962#2465#0" expanded="false" />
+            <element signature="e#2504#3039#0" expanded="false" />
+            <element signature="e#3663#4515#0" expanded="false" />
+            <element signature="e#4589#5616#0" expanded="false" />
+            <marker date="1396446696519" expanded="false" signature="1414:1429" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="962" column="9" selection-start="30821" selection-end="30821" vertical-scroll-proportion="0.34768212" vertical-offset="16144" max-vertical-offset="18734">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/analytics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="35" selection-start="950" selection-end="950" vertical-scroll-proportion="-11.769231" vertical-offset="255" max-vertical-offset="1309">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets2/js/mycharts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="33" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1377">
+        <state line="72" column="28" selection-start="1749" selection-end="1749" vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="1581">
           <folding>
             <element signature="n#!!block;n#drawchart#0" expanded="false" />
             <element signature="n#!!block;n#budget_chart#0" expanded="false" />
-            <marker date="1396444366377" expanded="true" signature="1099:1113" placeholder="..." />
-            <marker date="1396444366377" expanded="true" signature="1184:1214" placeholder="..." />
-            <marker date="1396444366377" expanded="true" signature="1268:1277" placeholder="..." />
-            <marker date="1396444366377" expanded="true" signature="3569:3583" placeholder="..." />
-            <marker date="1396444366377" expanded="true" signature="3654:3684" placeholder="..." />
-            <marker date="1396444366377" expanded="true" signature="3738:3747" placeholder="..." />
+            <marker date="1396446730358" expanded="true" signature="1099:1113" placeholder="..." />
+            <marker date="1396446730358" expanded="true" signature="1184:1214" placeholder="..." />
+            <marker date="1396446730358" expanded="true" signature="1268:1277" placeholder="..." />
+            <marker date="1396446730358" expanded="true" signature="4058:4072" placeholder="..." />
+            <marker date="1396446730358" expanded="true" signature="4143:4173" placeholder="..." />
+            <marker date="1396446730358" expanded="true" signature="4227:4236" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/layout/footer_two.php">
+    <entry file="file://$PROJECT_DIR$/application/views/analytics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="33" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.6944444" vertical-offset="748" max-vertical-offset="1547">
+        <state line="150" column="54" selection-start="6717" selection-end="6717" vertical-scroll-proportion="-10.153846" vertical-offset="2286" max-vertical-offset="3094">
           <folding>
-            <element signature="e#1927#2430#0" expanded="false" />
-            <element signature="e#3054#3906#0" expanded="false" />
-            <element signature="e#3980#5007#0" expanded="false" />
-            <marker date="1396444422404" expanded="false" signature="1414:1429" placeholder="..." />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/analytics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="40" selection-start="1353" selection-end="1353" vertical-scroll-proportion="-13.653846" vertical-offset="461" max-vertical-offset="1309">
+          <folding>
+            <element signature="n#project_budgets#0;n#Analytics#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/commons_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="1" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.38562092" vertical-offset="563" max-vertical-offset="1649">
+          <folding>
+            <element signature="n#save#0;n#Commons_model#0;n#!!top" expanded="false" />
+            <element signature="n#project_totals#0;n#Commons_model#0;n#!!top" expanded="false" />
+            <marker date="1396449061757" expanded="true" signature="360:412" placeholder="SELECT name ..counties..." />
+            <marker date="1396449061757" expanded="true" signature="2605:2845" placeholder="SELECT SUM( ..projects..." />
+            <marker date="1396449061757" expanded="true" signature="2904:3029" placeholder="------------..." />
           </folding>
         </state>
       </provider>

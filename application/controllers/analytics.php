@@ -42,6 +42,28 @@ class Analytics extends CI_Controller {
         }
     } //end sector_count_get function
 
+    //mtfe_chart data get function
+    public  function mtfe_count_get(){
+
+        $county= $_POST['county'];
+        $info=$this->commons_model->mtfe_count($county);
+
+        #testing returned data
+        if($info->num_rows() > 0 ){
+            //echo (json_encode($info->result()));
+            $rows = array();
+            foreach($info->result() as $rw){
+                $row[0] = $rw->MTFE_Sector;
+                $row[1] = $rw->Sector_Count;
+                array_push($rows,$row);
+            }
+            print json_encode($rows, JSON_NUMERIC_CHECK);
+        }
+        else{
+           echo 0;
+        }
+    } //end mtfe_count_get function
+
     //function to get total project budgets per year per county
     public  function project_budgets(){
         $county= $_POST['county'];

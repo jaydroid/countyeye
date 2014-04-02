@@ -56,6 +56,12 @@ class Commons_model extends CI_Model {
         $query= $this->db->query("SELECT `Sector`, COUNT(*) AS 'Sector_Count' FROM `Projects` WHERE `County`= '".$county."' GROUP BY `Sector`");
         return $query;
     }
+    #get mtfe_sector count for a county
+    public function mtfe_count($county){
+        $query= $this->db->query("SELECT `MTFE_Sector`, COUNT(*) AS 'Sector_Count' FROM `Projects` WHERE `County`= '".$county."' GROUP BY `MTFE_Sector`");
+        return $query;
+    }
+
     #get the budget totals per year for a county
     public function project_totals($county){
         $query =$this->db->query('SELECT SUM( P_one ) AS  "year1", SUM( P_two ) AS  "year2", SUM( P_three ) AS  "year3", SUM( P_four ) AS  "year4", SUM( P_five ) AS  "year5", SUM( P_six ) AS  "year6", SUM( P_seven ) AS  "year7" FROM projects WHERE `County` = "'.$county.'"');

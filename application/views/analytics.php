@@ -148,8 +148,8 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="b">
-                        <div class="col-md-8">
-                            MTFE SECTOR PIE CHART
+                        <div class="col-md-8" id="mtfe_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
+
                         </div>
                     </div>
                     <div class="tab-pane" id="c">

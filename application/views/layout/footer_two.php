@@ -46,7 +46,8 @@
             //add reveal code to show loader b4 data is retrieved
             var frmData=$('form').serialize();
             sector_data_grub(frmData);
-            //project_budget_grub(frmData);
+            mtfe_data_grub(frmData);
+            project_budget_grub(frmData);
         });
 
     });
@@ -65,6 +66,25 @@
             complete: function (XMLHttpRequest,status){
                 $('form') [0].reset();
                 $('#feeds').fadeOut(30000);
+            }
+        });
+    };
+
+    function mtfe_data_grub(frmData){
+        $.ajax({
+            type: 'post',
+            url: '<?php echo('analytics/mtfe_count_get'); ?>',
+            data: frmData,
+            dataType: 'json',
+            cache: false,
+            timeout:7000,
+            success: function (data){
+                //$('#feeds').addClass('done').html(data).fadeIn('fast');
+                //show loader gif..
+                mtfe_chart(data);
+            },
+            complete: function (XMLHttpRequest,status){
+                //hide loader gif
             }
         });
     };
