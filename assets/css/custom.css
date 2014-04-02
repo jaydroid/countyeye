@@ -1,0 +1,76 @@
+body{
+background: none;
+padding: 0px;
+margin: 0px;
+}
+.homepage-search{
+height: 517px;
+width: 100%;
+background: url(../img/map.jpg);
+-webkit-background-size:cover;
+-moz-background-size:cover;
+background-size:cover;
+}
+.input-box{
+height: 100px;
+width: 680px;
+margin: auto;
+}
+.homepg-logo{
+height: 86px;
+width: 580px;
+background: url(../img/logo.png);
+background-size: auto 86px;
+margin: auto;
+margin-top: 3%;
+}
+form{
+padding-left: 2%;
+padding-top: 4%;
+}
+.form-control{
+width: 540px;
+height: 45px;
+}
+.btn{
+height: 45px;
+}
+.navbar{
+margin: 0;
+z-index: 900;
+background: #3dd;
+width: 100%;
+height: 50px;
+}
+/*---------Project_view.php css -------------*/
+.custom-container{
+margin-top: 2%;
+padding-top: 2%;
+width: 100%;
+height: 600px;
+background: #333;
+}
+.info-display{
+margin:auto;
+margin-bottom: 2%;
+background: #CCC;
+width:20%;
+height:450px;
+float: left;
+}
+.map-canvas{
+margin:auto;
+float: left;
+}
+.records-display{
+margin:auto;
+margin-bottom:2%;
+background: #3dd;
+width:40%;
+height: 100px;
+text-align: center;
+}
+.records-display p{
+font-size: 48px;
+padding-top: 5%;
+}
