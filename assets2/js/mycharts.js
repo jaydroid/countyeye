@@ -69,8 +69,7 @@ function drawchart(dt){
 }//end draw chart function
 
 
-//Function to draw highchart
-
+//Function to draw sector pie chart..
 function sector_chart(data){
 
 $('#sector_pie').highcharts({
@@ -80,7 +79,7 @@ chart: {
     plotShadow: false
 },
 title: {
-    text: 'Project sectors being undertaken in a county'
+    text: 'Project sectors being undertaken'
     },
 tooltip: {
     pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -100,7 +99,7 @@ plotOptions: {
 series: [{
         type: 'pie',
         name: 'Sector',
-        data: [data]
+        data: data
     }]
 });
 };

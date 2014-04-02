@@ -79,13 +79,11 @@
             timeout:7000,
             success: function (data){
                 //$('#feeds').addClass('done').html(data).fadeIn('fast');
-               console.log(data[0]);
+                //show loader gif..
+                sector_chart(data);
             },
             complete: function (XMLHttpRequest,status){
-//                $('form') [0].reset();
-//                $('#feeds').fadeOut(30000);
-                //call sector pie chart draw function
-                alert("I'm done");
+                //hide loader gif
             }
         });
     };

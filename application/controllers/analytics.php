@@ -28,18 +28,17 @@ class Analytics extends CI_Controller {
 
         #testing returned data
         if($info->num_rows() > 0 ){
+            //echo (json_encode($info->result()));
+            $rows = array();
             foreach($info->result() as $rw){
-                $arr= array();
-                $arr[0]=$rw->Sector;
-                $arr[1]=$rw->Sector_Count;
+                $row[0] = $rw->Sector;
+                $row[1] = $rw->Sector_Count;
+                array_push($rows,$row);
             }
-            echo (json_encode($arr));
-
-            #print_r($info->result());
-
+            print json_encode($rows, JSON_NUMERIC_CHECK);
         }
         else{
-           echo ('Something Went Wrong');
+           echo 0;
         }
     } //end sector_count_get function
 
