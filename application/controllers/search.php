@@ -40,13 +40,12 @@ class Search extends CI_Controller {
              $config['zoom'] = 'auto';
              $config['map_height'] = '540px';
              $this->googlemaps->initialize($config);
-
-
+             $coordinates=$coords->result();
 
              //markers..
              $marker = array();
 
-             foreach ($coords->result() as $result )
+             foreach ( $coordinates as $result)
              {
                  $marker['position'] = $result->Coordinates;
                  $row =$this->commons_model->details($result->Id);
@@ -56,57 +55,57 @@ class Search extends CI_Controller {
                  foreach($row->result() as $rw){
                      //onclick event listener
                      //call load_info function and pass it all necessary array information
-                     if($rw->Sector ="education"){
+                     if(strtolower($rw->Sector) == "education"){
                          $marker['icon']= './assets2/img/1.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="water"){
+                     if(strtolower($rw->Sector) =="water"){
                          $marker['icon']= './assets2/img/2.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="agriculture"){
+                     if(strtolower($rw->Sector) =="agriculture"){
                          $marker['icon']= './assets2/img/4.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="health"){
+                     if(strtolower($rw->Sector) =="health"){
                          $marker['icon']= './assets2/img/3.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="roads/bridges"){
+                     if(strtolower($rw->Sector) =="roads/bridges"){
                          $marker['icon']= './assets2/img/5.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="youth/sports"){
+                     if(strtolower($rw->Sector) =="youth/sports"){
                          $marker['icon']= './assets2/img/6.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="bursary"){
+                     if(strtolower($rw->Sector) =="bursary"){
                          $marker['icon']= './assets2/img/6.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="other"){
+                     if(strtolower($rw->Sector) =="other"){
                          $marker['icon']= './assets2/img/6.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="security"){
+                     if(strtolower($rw->Sector) =="security"){
                          $marker['icon']= './assets2/img/6.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="electricity"){
+                     if(strtolower($rw->Sector) =="electricity"){
                          $marker['icon']= './assets2/img/6.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);
                      }
-                     if($rw->Sector="environment"){
+                     if(strtolower($rw->Sector) =="environment"){
                          $marker['icon']= './assets2/img/6.png' ;
                          $marker['onclick']= 'load_info("'.$rw->Project_name.'|'.$rw->County.'|'.$rw->Constituency.'|'.$rw->Sector.'|'.$rw->MTFE_Sector.'|'.$rw->Tasks.'|'.$rw->Expected_output.'|'.$rw->Status.'|'.$rw->Remarks.'|'.$rw->Estimated_cost.'|'.$rw->P_one.'|'.$rw->P_two.'|'.$rw->P_three.'|'.$rw->P_four.'|'.$rw->P_five.'|'.$rw->P_six.'|'.$rw->P_seven.'|'.$rw->Id.'")';
                          $this->googlemaps->add_marker($marker);

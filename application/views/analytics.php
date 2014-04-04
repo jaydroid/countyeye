@@ -125,7 +125,9 @@
                             <?php foreach ($county as $row){?>
                                 <option  value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
                             <?php } ?>
-                        </select><span class="input-group-btn"><input class="btn btn-info" id="visualize_one" value="Visualize"></span>
+                        </select><span class="input-group-btn"><input class="btn btn-info" id="visualize_one" type="button" value="Visualize"></span>
+
+                        <!--                        <span class="input-group-btn"><input class="btn btn-info"  value="Visualize"></span>-->
                     </div>
                 </form>
             </div>

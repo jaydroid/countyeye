@@ -28,7 +28,7 @@ class Commons_model extends CI_Model {
     }
      #getcoords
      public function getcoord($name){
-        $query = $this->db->query('SELECT `Coordinates`,`Id` FROM  `projects` WHERE County = "'.$name.'" LIMIT 300');
+        $query = $this->db->query('SELECT `Coordinates`,`Id` FROM  `projects` WHERE County = "'.$name.'" LIMIT 400');
         return $query;
      }
      #refine function for refining map data via county name and sector
@@ -86,18 +86,6 @@ class Commons_model extends CI_Model {
 
 #County specific project status filter
 # SELECT * FROM `projects` WHERE `County`="Kiambu" AND `Status` LIKE "%complete%"
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -212,19 +212,19 @@
                                         </tr>
                                         <tr>
                                             <td class="ttl">County</td>
-                                            <td id="p_county"></td>
+                                            <td><span id="p_county" class="label label-info"></span></td>
                                         </tr>
                                         <tr>
                                             <td class="ttl">Constituency</td>
-                                            <td id="p_loc"></td>
+                                            <td><span id="p_loc" class="label label-success"></span></td>
                                         </tr>
                                         <tr>
                                             <td class="ttl">Sector</td>
-                                            <td id="p_sector"></td>
+                                            <td><span id="p_sector" class="label label-warning"></span></td>
                                         </tr>
                                         <tr>
                                             <td class="ttl">MTFE_Sector</td>
-                                            <td id="p_sector_two"></td>
+                                            <td><span id="p_sector_two" class="label label-danger"></span></td>
                                         </tr>
                                         <tr>
                                             <td class="ttl">Tasks</td>

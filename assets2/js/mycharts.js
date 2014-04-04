@@ -156,11 +156,12 @@ function budget_chart(dt){
 
     $('#budget_chart').highcharts({
 
-        chart: {
-            type: 'column'
-        },
+//        chart: {
+//            type: 'column'
+//        },
         title: {
-            text: 'Total Project Budget (7Yrs)'
+            text: 'Total Project Budget (7Yrs)',
+            x: 20
         },
         subtitle: {
             text: 'Source: Kenya Open Data'
@@ -177,15 +178,20 @@ function budget_chart(dt){
             ]
         },
         yAxis: {
-            min: 0,
             title: {
                 text: 'Amount (Ksh)'
-            }
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
         },
+
         tooltip: {
             headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
             pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f} Ksh</b></td></tr>',
+                '<td style="padding:0; font-size: 10px;"><b>{point.y:.1f} Ksh</b></td></tr>',
             footerFormat: '</table>',
             shared: true,
             useHTML: true
