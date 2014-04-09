@@ -26,20 +26,48 @@
 
         //comments grub n push function..
         $('#comment_btn').click(function(){
-
            var commnt= $('#comment').val();
            var id= $('#p_id').val();
-
             if(commnt == "" || commnt <= 5){
-                $('#err1').fadeIn();
+                if(commnt == ""){
+                    $('#err1').fadeIn();
+                }
             }
             else{
                 $('#err1').fadeOut();
                 $('#feeds').removeClass().addClass('cool').html('<p id="err1"><img src="../assets2/img/load.gif" align="center" style="margin-top:4px;" /></p>').fadeIn('fast');
-                var formData= $('form').serialize();
+                var formData= $('#sentiment').serialize();
                 submit(formData);//call submit function..
             }
         });
+        //---end comment push function
+
+        //Flag grub n push function..
+        $('#flag_btn').click(function(){
+            var commnt= $('#comment2').val();
+            var id= $('#p_id').val();
+            var allegment= $('#all').val();
+
+            if(commnt == "" || commnt <= 5 || allegment == ""){
+                if(commnt == ""){
+                    $('#err2').fadeIn();
+                }
+                else if(commnt <= 5){
+                    $('#err2').fadeIn();
+                }
+                if(allegment == ""){
+                    $('#err3').fadeIn();
+                }
+            }
+            else{
+                $('#err2').fadeOut();
+                $('#err3').fadeOut();
+                $('#feeds2').removeClass().addClass('cool').html('<p id="err1"><img src="../assets2/img/load.gif" align="center" style="margin-top:4px;" /></p>').fadeIn('fast');
+                var flagData= $('#flag').serialize();
+                submit_flags(flagData);//call submit function..
+            }
+        });
+        //----end flag push function
 
         $('#visualize_one').click(function(){
 
@@ -64,12 +92,29 @@
                 $('#feeds').addClass('done').html(data).fadeIn('fast');
             },
             complete: function (XMLHttpRequest,status){
-                $('form') [0].reset();
+                $('#sentiment') [0].reset();
                 $('#feeds').fadeOut(30000);
             }
         });
     };
 
+    function submit_flags(flagData){
+        $.ajax({
+            type: 'post',
+            url: '<?php echo('search/save_flag'); ?>',
+            data: flagData,
+            // dataType: 'html',
+            cache: false,
+            timeout:7000,
+            success: function (data){
+                $('#feeds2').addClass('done').html(data).fadeIn('fast');
+            },
+            complete: function (XMLHttpRequest,status){
+                $('#flag') [0].reset();
+                $('#feeds2').fadeOut(30000);
+            }
+        });
+    };
     function mtfe_data_grub(frmData){
         $.ajax({
             type: 'post',
@@ -156,7 +201,9 @@
         var dt= [details[10],details[11],details[12],details[13],details[14],details[15],details[16]];
         drawchart(dt); //call graph draw function..
         $('#p_id').val(details[17]); //project id as an identifier..
+        $('#p_id2').val(details[17]); //project id as an identifier..
         $('#p_id_user').val(<?php echo ($this->session->userdata('id'));?>);
+        $('#p_id_user2').val(<?php echo ($this->session->userdata('id'));?>);
         $('#p_details').fadeIn(); //show the project details div
     }//end load info function
 

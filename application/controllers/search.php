@@ -148,7 +148,26 @@ class Search extends CI_Controller {
         else if($data !=1){
              echo "<i class='icon-remove-circle'></i>"."An Error occured: Please Try Again";
         }
-    }
+    } //end save function
+
+    public  function  save_flag(){
+        $allegment = $_POST['allegement'];
+        $comment = $_POST['reason'];
+        $userId = $_POST['user'];
+        $projectId = $_POST['id'];
+
+        $data=$this->commons_model->save_flag($userId,$projectId,$allegment,$comment);
+
+        #testing returned data
+        if($data==1){
+            echo "<i class='icon-ok-sign'></i>"."Thank you for your exercising your right";
+        }
+        else if($data !=1){
+            echo "<i class='icon-remove-circle'></i>"."An Error occured: Please Try Again";
+        }
+
+    } //end save flag
+
 
 } //end controller..
 

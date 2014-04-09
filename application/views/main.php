@@ -72,7 +72,7 @@
             border-radius: 0px;
             color: #71B8EE;
         }
-        #err1{
+        #err1,#err2,#err3{
             display:none ;
         }
         .cool{
@@ -86,6 +86,9 @@
         }
         #p_id, #p_id_user{
            display: none;
+        }
+        #p_id_user2,#p_id2{
+            display: none;
         }
     </style>
 </head>
@@ -269,7 +272,7 @@
 
                                     </div>
 
-                                    <form action="#">
+                                    <form id="sentiment" action="#">
                                         <input name="id" id="p_id" type="text"/>
                                         <input name="user" id="p_id_user" type="text"/>
                                         <p id="err1" style="color: red">*please input a comment</p>
@@ -284,32 +287,37 @@
                             <div class="tab-pane" id="flags">
                                 <br/>
                                 <div class="col-md-12">
-                                    <div class="field-box">
-                                        <form action="" method="post">
-                                        <label>Report For:</label>
-                                            <br/>
-                                        <label class="checkbox-inline">
-                                            <div class="checker" id="uniform-inlineCheckbox1"><span class="checked"><input type="checkbox" id="inlineCheckbox1" value="option1"></span></div> Misappropriation
-                                        </label>
-                                        <label class="checkbox-inline">
-                                            <div class="checker" id="uniform-inlineCheckbox2"><span class="checked"><input type="checkbox" id="inlineCheckbox2" value="option1"></span></div> Corruption
-                                        </label>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="col-mod-12">
-                                    <div class="field-box">
-                                        <div class="col-md-12">
-                                            <textarea class="form-control" rows="4" placeholder="Give a reason for flagging this project"></textarea>
-                                            <br/>
-                                            <a class="btn-flat gray">Report</a>
-                                            </form>
+                                    <form action="#" id="flag">
+                                        <div id="feeds2">
+
                                         </div>
-                                    </div>
+                                        <div class="field-box" style="padding-left: 13px;">
+                                            <label>Report For:</label> <br/>
+                                            <p id="err3" style="color: red">*please select a reason</p>
+                                            <div class="ui-select">
+                                                <select name="allegement" id="all">
+                                                    <option value="">Choose Reason</option>
+                                                    <option value="corruption">Corruption </option>
+                                                    <option value="misappropriation">Misappropriation</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div class="field-box">
+                                            <div class="col-md-12">
+                                                <input name="id" id="p_id2" type="text"/>
+                                                <input name="user" id="p_id_user2" type="text"/>
+
+                                                <p id="err2" style="color: red">*please input a comment</p>
+                                                <label>Brief Comment:</label>
+                                                <textarea class="form-control" id="comment2" name="reason" rows="4" placeholder="Give a reason for flagging this project"></textarea>
+                                                <br/>
+                                                <a class="btn-flat gray" id="flag_btn">Report</a>
+                                            </div>
+                                    </form>
                                 </div>
 
                             </div>
-
                             <?php }?>
                             <!--end flag div-->
                         </div>

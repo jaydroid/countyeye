@@ -49,6 +49,16 @@ class Commons_model extends CI_Model {
             return $query;
         }
     }
+    public function save_flag($userId,$projectId,$allegment,$comment){
+       //$query= $this->db->query('UPDATE TABLE `comment` ');
+        if($userId==""){
+            return 0;
+        }
+        else{
+            $query=$this->db->query("INSERT INTO `flags` ( `Reason`, `Comment`, `Project_Id`, `User_id`) VALUES ('".$allegment."','".$comment."','".$projectId."','".$userId."')");
+            return $query;
+        }
+    }
 
     #-------------------------------------PROJECT ANALYTICS FUNCTIONS----------------------------------------
     #Get count of projects per sector
