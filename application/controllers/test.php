@@ -22,16 +22,16 @@ class Test extends CI_Controller {
 
 
     public function  index(){
-//        $sector="health";
-//        $name="Kiambu";
-//        $jina=mysql_real_escape_string($name);
-//
-//        $refines= $this->commons_model->refine($sector,$jina);
-//
-//        foreach ($refines->result() as $row )
-//        {
-//            echo $row->Coordinates. "<br>";
-//        }
+        $sector="health";
+        $name="Marakwet_Elgeyo";
+        $jina=mysql_real_escape_string($name);
+
+        $refines= $this->commons_model->refine($sector,$jina);
+
+        foreach ($refines->result() as $row )
+        {
+            echo $row->Coordinates. "<br>";
+        }
         $this->load->view('test');
     }//end index function
 }

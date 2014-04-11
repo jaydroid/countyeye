@@ -10,6 +10,15 @@
             color: red;
             text-align: center;
         }
+        .data{
+            margin-left:auto;
+            margin-right:auto;
+            font-size: 16px;
+            background: #f1f1f1;
+            padding: 2%;
+            width: 300px;
+            border-radius: 5px;
+        }
 
     </style>
 
@@ -46,10 +55,13 @@
                                  <hr />
                               </div>
                               <!-- Page title -->
-                              
                               <br />
                               <form class="form-horizontal" role="form" method="post">
-                                <div class="form-group">
+                                  <div class="data">
+                                      <input type="checkbox"> Request a data account <i class="icon-hdd"></i>
+                                  </div><br>
+
+                                  <div class="form-group">
                                 <?php echo form_error('name'); ?>
                                   <label for="inputName" class="col-lg-2 control-label">Name*</label>
                                   <div class="col-lg-10">
@@ -113,4 +125,14 @@
                   </div>
          </div>
       </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('input[type="checkbox"].style1').checkbox({
+            buttonStyleChecked: 'btn-success',
+            checkedClass: 'icon-check',
+            uncheckedClass: 'icon-check-empty'
+        });
+    });
+</script>
 </body>
+

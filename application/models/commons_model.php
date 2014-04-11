@@ -98,5 +98,8 @@ class Commons_model extends CI_Model {
 # SELECT * FROM `projects` WHERE `County`="Kiambu" AND `Status` LIKE "%complete%"
 
 
+#----------------To be used---------------------------
+#query to get the total number of projects per county
+#SELECT  `County` , COUNT( * ) AS  "Count" FROM  `Projects`  GROUP BY  `County` LIMIT 471
 
 ?>

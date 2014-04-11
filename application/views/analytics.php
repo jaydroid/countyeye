@@ -20,7 +20,7 @@
             margin-top: 2%;
             width: 100%;
             height: 40px;
-            border-radius: 5px;
+            /*border-radius: 5px;*/
         }
         input[type="checkbox"]{
             cursor: pointer;
@@ -98,6 +98,12 @@
                 </div>
                 <i class="icon-signal"></i>
                 <span>Analytics</span>
+            </a>
+        </li>
+        <li>
+            <a href="<?php echo ('data'); ?>">
+                <i class="icon-hdd"></i>
+                <span>App Data</span>
             </a>
         </li>
     </ul>
