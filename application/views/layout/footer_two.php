@@ -76,6 +76,7 @@
             sector_data_grub(frmData);
             mtfe_data_grub(frmData);
             project_budget_grub(frmData);
+            overbudget_grub(frmData);
             project_per_county();
         });
 
@@ -119,7 +120,7 @@
 
 
 
-    //Data get ajax calls;
+    //-----------------------------------------Data get ajax calls----------------------------;
 
     //function to get total number of projects being undertaken per county
     function project_per_county(){
@@ -131,13 +132,11 @@
             cache: false,
             timeout:7000,
             success: function (data){
-                //console.log(data);
 
                 var values = new Array();
                 for(var x =0; x <=46 ; x++){
                   values[x] = parseInt(data[x]);
                 }
-                console.log(values);
                 project_per_county_chart(data);
             },
             complete: function (XMLHttpRequest,status){
@@ -156,7 +155,6 @@
             cache: false,
             timeout:7000,
             success: function (data){
-                //$('#feeds').addClass('done').html(data).fadeIn('fast');
                 //show loader gif..
                 mtfe_chart(data);
             },
@@ -175,7 +173,6 @@
             cache: false,
             timeout:7000,
             success: function (data){
-                //$('#feeds').addClass('done').html(data).fadeIn('fast');
                 //show loader gif..
                 sector_chart(data);
             },
@@ -194,27 +191,38 @@
             cache: false,
             timeout:7000,
             success: function (data){
-                //$('#feeds').addClass('done').html(data).fadeIn('fast');
-//               console.log(data[0]);
-//
-//               console.log(data[0],data[1],data[2],data[3],data[4],data[5],data[6]);
                var dt= [data[0],data[1],data[2],data[3],data[4],data[5],data[6]];
                budget_chart(dt);
             },
             complete: function (XMLHttpRequest,status){
-//                $('form') [0].reset();
-//                $('#feeds').fadeOut(30000);
-                //call sector pie chart draw function
-                //alert("I'm done");
+                //removed loader
             }
         });
     };
 
-    //Function to load project info onto DOM
+    function overbudget_grub(frmData){
+        $.ajax({
+            type: 'post',
+            url: '<?php echo('analytics/overbudget_get'); ?>',
+            data: frmData,
+            cache: false,
+            timeout:7000,
+            success: function (data){
+                var details = data.split(",");
+//                var dt= [details[0],details[1]];
+
+                budget_donut_chart(details);
+            },
+            complete: function (XMLHttpRequest,status){
+                //removed loader
+            }
+        });
+    };
+
+    //----------------------------------------Function to load project info onto DOM
     function load_info(id){
 
         var details = id.split("|");
-        //var chart = $('#chart_canvas').highcharts();
         //append project info to DOM Elements;
         //basic information
         $('#p_name').html(details[0]);

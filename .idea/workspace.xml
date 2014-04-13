@@ -5,11 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/analytics.php" afterPath="$PROJECT_DIR$/application/controllers/analytics.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/analytics.php" afterPath="$PROJECT_DIR$/application/views/analytics.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/commons_model.php" afterPath="$PROJECT_DIR$/application/models/commons_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/data.php" afterPath="$PROJECT_DIR$/application/controllers/data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/data.php" afterPath="$PROJECT_DIR$/application/views/data.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/layout/footer_two.php" afterPath="$PROJECT_DIR$/application/views/layout/footer_two.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets2/js/mycharts.js" afterPath="$PROJECT_DIR$/assets2/js/mycharts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="county.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,17 +32,21 @@
       <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="0" selection-start="9385" selection-end="9385" vertical-scroll-proportion="0.0" vertical-offset="1797" max-vertical-offset="3043">
+            <state line="157" column="0" selection-start="9385" selection-end="9385" vertical-scroll-proportion="-33.53846" vertical-offset="1797" max-vertical-offset="3043">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="analytics.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="analytics.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/analytics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="103" selection-start="7826" selection-end="7826" vertical-scroll-proportion="-15.461538" vertical-offset="2556" max-vertical-offset="3332">
-              <folding />
+            <state line="181" column="89" selection-start="8155" selection-end="8155" vertical-scroll-proportion="0.72835314" vertical-offset="2648" max-vertical-offset="3468">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,10 +54,16 @@
       <file leaf-file-name="footer_two.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/layout/footer_two.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="40" selection-start="4822" selection-end="4846" vertical-scroll-proportion="-0.0" vertical-offset="2380" max-vertical-offset="4403">
+            <state line="212" column="0" selection-start="6942" selection-end="6942" vertical-scroll-proportion="-5.8846154" vertical-offset="1734" max-vertical-offset="2822">
               <folding>
-                <marker date="1397324184244" expanded="false" signature="1468:1483" placeholder="..." />
-                <marker date="1397324184244" expanded="false" signature="2495:2510" placeholder="..." />
+                <element signature="e#3159#3668#0" expanded="false" />
+                <element signature="e#3706#4217#0" expanded="false" />
+                <element signature="e#4427#5024#0" expanded="false" />
+                <element signature="e#5062#5523#0" expanded="false" />
+                <element signature="e#5564#6029#0" expanded="false" />
+                <element signature="e#6073#6579#0" expanded="false" />
+                <marker date="1397381572429" expanded="true" signature="1468:1483" placeholder="..." />
+                <marker date="1397381572429" expanded="true" signature="2495:2510" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -65,10 +72,17 @@
       <file leaf-file-name="commons_model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/commons_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="5" selection-start="3462" selection-end="3462" vertical-scroll-proportion="-1.7307693" vertical-offset="1315" max-vertical-offset="1972">
+            <state line="95" column="0" selection-start="4086" selection-end="4086" vertical-scroll-proportion="-14.230769" vertical-offset="1041" max-vertical-offset="2023">
               <folding>
-                <marker date="1397315449635" expanded="true" signature="360:412" placeholder="SELECT name ..counties..." />
-                <marker date="1397315449635" expanded="true" signature="3374:3453" placeholder="SELECT Count..." />
+                <element signature="n#sector_count#0;n#Commons_model#0;n#!!top" expanded="false" />
+                <element signature="n#mtfe_count#0;n#Commons_model#0;n#!!top" expanded="false" />
+                <element signature="n#project_totals#0;n#Commons_model#0;n#!!top" expanded="false" />
+                <element signature="n#num_of_projects#0;n#Commons_model#0;n#!!top" expanded="false" />
+                <marker date="1397380485377" expanded="true" signature="360:412" placeholder="SELECT name ..counties..." />
+                <marker date="1397380485377" expanded="true" signature="3418:3497" placeholder="SELECT Count..." />
+                <marker date="1397380485377" expanded="true" signature="3776:3833" placeholder="SELECT COUNT..." />
+                <marker date="1397380485377" expanded="true" signature="3776:3888" placeholder="SELECT COUNT..." />
+                <marker date="1397380485377" expanded="true" signature="3776:3834" placeholder="SELECT COUNT..." />
               </folding>
             </state>
           </provider>
@@ -77,23 +91,27 @@
       <file leaf-file-name="analytics.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/analytics.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="44" selection-start="1650" selection-end="1650" vertical-scroll-proportion="-8.5" vertical-offset="714" max-vertical-offset="1955">
-              <folding />
+            <state line="91" column="0" selection-start="2645" selection-end="2645" vertical-scroll-proportion="-8.192307" vertical-offset="960" max-vertical-offset="1564">
+              <folding>
+                <element signature="n#project_budgets#0;n#Analytics#0;n#!!top" expanded="false" />
+                <element signature="n#total_projects#0;n#Analytics#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mycharts.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mycharts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets2/js/mycharts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="14" selection-start="5872" selection-end="5872" vertical-scroll-proportion="0.7471637" vertical-offset="3636" max-vertical-offset="4777">
+            <state line="324" column="23" selection-start="7889" selection-end="7889" vertical-scroll-proportion="0.0" vertical-offset="4045" max-vertical-offset="4675">
               <folding>
-                <marker date="1397374730560" expanded="false" signature="1099:1113" placeholder="..." />
-                <marker date="1397374730560" expanded="false" signature="1184:1214" placeholder="..." />
-                <marker date="1397374730560" expanded="false" signature="1268:1277" placeholder="..." />
-                <marker date="1397374730560" expanded="false" signature="4191:4205" placeholder="..." />
-                <marker date="1397374730560" expanded="false" signature="4276:4306" placeholder="..." />
-                <marker date="1397374730560" expanded="false" signature="4360:4387" placeholder="..." />
+                <element signature="n#!!block;n#project_per_county_chart#0" expanded="false" />
+                <marker date="1397382161957" expanded="false" signature="1099:1113" placeholder="..." />
+                <marker date="1397382161957" expanded="false" signature="1184:1214" placeholder="..." />
+                <marker date="1397382161957" expanded="false" signature="1268:1277" placeholder="..." />
+                <marker date="1397382161957" expanded="false" signature="4191:4205" placeholder="..." />
+                <marker date="1397382161957" expanded="false" signature="4276:4306" placeholder="..." />
+                <marker date="1397382161957" expanded="false" signature="4360:4387" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -143,8 +161,8 @@
         <option value="$PROJECT_DIR$/application/views/main.php" />
         <option value="$PROJECT_DIR$/application/controllers/data.php" />
         <option value="$PROJECT_DIR$/application/views/data.php" />
-        <option value="$PROJECT_DIR$/application/models/commons_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/analytics.php" />
+        <option value="$PROJECT_DIR$/application/models/commons_model.php" />
         <option value="$PROJECT_DIR$/application/views/layout/footer_two.php" />
         <option value="$PROJECT_DIR$/application/views/analytics.php" />
         <option value="$PROJECT_DIR$/assets2/js/mycharts.js" />
@@ -377,7 +395,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -608,57 +626,78 @@
         <state line="31" column="0" selection-start="716" selection-end="716" vertical-scroll-proportion="-18.807692" vertical-offset="38" max-vertical-offset="663" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/search.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/analytics.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="0" selection-start="9385" selection-end="9385" vertical-scroll-proportion="0.0" vertical-offset="1797" max-vertical-offset="3043">
-          <folding />
+        <state line="91" column="0" selection-start="2645" selection-end="2645" vertical-scroll-proportion="-8.192307" vertical-offset="960" max-vertical-offset="1564">
+          <folding>
+            <element signature="n#project_budgets#0;n#Analytics#0;n#!!top" expanded="false" />
+            <element signature="n#total_projects#0;n#Analytics#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/commons_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="5" selection-start="3462" selection-end="3462" vertical-scroll-proportion="-1.7307693" vertical-offset="1315" max-vertical-offset="1972">
+        <state line="95" column="0" selection-start="4086" selection-end="4086" vertical-scroll-proportion="-14.230769" vertical-offset="1041" max-vertical-offset="2023">
           <folding>
-            <marker date="1397315449635" expanded="true" signature="360:412" placeholder="SELECT name ..counties..." />
-            <marker date="1397315449635" expanded="true" signature="3374:3453" placeholder="SELECT Count..." />
+            <element signature="n#sector_count#0;n#Commons_model#0;n#!!top" expanded="false" />
+            <element signature="n#mtfe_count#0;n#Commons_model#0;n#!!top" expanded="false" />
+            <element signature="n#project_totals#0;n#Commons_model#0;n#!!top" expanded="false" />
+            <element signature="n#num_of_projects#0;n#Commons_model#0;n#!!top" expanded="false" />
+            <marker date="1397380485377" expanded="true" signature="360:412" placeholder="SELECT name ..counties..." />
+            <marker date="1397380485377" expanded="true" signature="3418:3497" placeholder="SELECT Count..." />
+            <marker date="1397380485377" expanded="true" signature="3776:3833" placeholder="SELECT COUNT..." />
+            <marker date="1397380485377" expanded="true" signature="3776:3888" placeholder="SELECT COUNT..." />
+            <marker date="1397380485377" expanded="true" signature="3776:3834" placeholder="SELECT COUNT..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/analytics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="44" selection-start="1650" selection-end="1650" vertical-scroll-proportion="-8.5" vertical-offset="714" max-vertical-offset="1955">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/layout/footer_two.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="40" selection-start="4822" selection-end="4846" vertical-scroll-proportion="0.0" vertical-offset="2380" max-vertical-offset="4403">
+        <state line="212" column="0" selection-start="6942" selection-end="6942" vertical-scroll-proportion="-5.8846154" vertical-offset="1734" max-vertical-offset="2822">
           <folding>
-            <marker date="1397324184244" expanded="false" signature="1468:1483" placeholder="..." />
-            <marker date="1397324184244" expanded="false" signature="2495:2510" placeholder="..." />
+            <element signature="e#3159#3668#0" expanded="false" />
+            <element signature="e#3706#4217#0" expanded="false" />
+            <element signature="e#4427#5024#0" expanded="false" />
+            <element signature="e#5062#5523#0" expanded="false" />
+            <element signature="e#5564#6029#0" expanded="false" />
+            <element signature="e#6073#6579#0" expanded="false" />
+            <marker date="1397381572429" expanded="true" signature="1468:1483" placeholder="..." />
+            <marker date="1397381572429" expanded="true" signature="2495:2510" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/analytics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="103" selection-start="7826" selection-end="7826" vertical-scroll-proportion="-15.461538" vertical-offset="2556" max-vertical-offset="3332">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets2/js/mycharts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="14" selection-start="5872" selection-end="5872" vertical-scroll-proportion="0.7471637" vertical-offset="3636" max-vertical-offset="4777">
+        <state line="324" column="23" selection-start="7889" selection-end="7889" vertical-scroll-proportion="0.0" vertical-offset="4045" max-vertical-offset="4675">
           <folding>
-            <marker date="1397374730560" expanded="false" signature="1099:1113" placeholder="..." />
-            <marker date="1397374730560" expanded="false" signature="1184:1214" placeholder="..." />
-            <marker date="1397374730560" expanded="false" signature="1268:1277" placeholder="..." />
-            <marker date="1397374730560" expanded="false" signature="4191:4205" placeholder="..." />
-            <marker date="1397374730560" expanded="false" signature="4276:4306" placeholder="..." />
-            <marker date="1397374730560" expanded="false" signature="4360:4387" placeholder="..." />
+            <element signature="n#!!block;n#project_per_county_chart#0" expanded="false" />
+            <marker date="1397382161957" expanded="false" signature="1099:1113" placeholder="..." />
+            <marker date="1397382161957" expanded="false" signature="1184:1214" placeholder="..." />
+            <marker date="1397382161957" expanded="false" signature="1268:1277" placeholder="..." />
+            <marker date="1397382161957" expanded="false" signature="4191:4205" placeholder="..." />
+            <marker date="1397382161957" expanded="false" signature="4276:4306" placeholder="..." />
+            <marker date="1397382161957" expanded="false" signature="4360:4387" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="0" selection-start="9385" selection-end="9385" vertical-scroll-proportion="-33.53846" vertical-offset="1797" max-vertical-offset="3043">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/analytics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="89" selection-start="8155" selection-end="8155" vertical-scroll-proportion="0.72835314" vertical-offset="2648" max-vertical-offset="3468">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

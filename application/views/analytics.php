@@ -149,6 +149,7 @@
                     <li><a href="#c" data-toggle="tab"><i class="icon icon-money"></i> Project Budgets</a></li>
                     <li><a href="#d" data-toggle="tab"><i class="icon icon-time"></i> Projects Status</a></li>
                     <li><a href="#e" data-toggle="tab"><i class="icon icon-tasks"></i> Projects per county</a></li>
+                    <li><a href="#f" data-toggle="tab"><i class="icon icon-money"></i> Budgeting</a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="a">
@@ -176,6 +177,13 @@
 
                         </div>
                     </div>
+
+                    <div class="tab-pane" id="f">
+                        <div class="col-md-6" id="project_budgets"  style="min-width: 310px; height: 400px; margin: 0 auto" >
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <!-- /tabs -->

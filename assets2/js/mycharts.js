@@ -274,3 +274,56 @@ function project_per_county_chart(dt){
         }]
     });
 }
+
+/*
+* Function to draw donut of budget overviews
+*
+* */
+function budget_donut_chart(dt){
+    //alert(dt[0]);
+    var num = dt[0].substr(1); //2nd grade hack
+    a=parseInt(num);
+    b=parseInt(dt[1]);
+
+    $('#project_budgets').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 0,
+            plotShadow: false
+        },
+        title: {
+            text: 'Budget<br>Overviews',
+            align: 'center',
+            verticalAlign: 'middle',
+            y: 50
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                dataLabels: {
+                    enabled: true,
+                    distance: -50,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'white',
+                        textShadow: '0px 1px 2px black'
+                    }
+                },
+                startAngle: -90,
+                endAngle: 90,
+                center: ['50%', '75%']
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Percentage',
+            innerSize: '50%',
+            data: [
+                ['On budget', a],
+                ['Over budget',  b]
+            ]
+        }]
+    });
+}

@@ -76,9 +76,24 @@ class Commons_model extends CI_Model {
         $query =$this->db->query('SELECT SUM( P_one ) AS  "year1", SUM( P_two ) AS  "year2", SUM( P_three ) AS  "year3", SUM( P_four ) AS  "year4", SUM( P_five ) AS  "year5", SUM( P_six ) AS  "year6", SUM( P_seven ) AS  "year7" FROM projects WHERE `County` = "'.$county.'"');
         return $query;
     }
+    #Query to show total number of projects
     public function num_of_projects(){
         $query=$this->db->query("SELECT  County , COUNT(*) AS  'Count' FROM  Projects  GROUP BY  County LIMIT 47");
         return $query;
+    }
+
+    #query to get count of projects that went off budget
+    public function over_budgets($county){
+        $totals=$this->db->query("SELECT COUNT(*) as 'Total' FROM `projects` WHERE `County` =('".$county."')");
+        $query=$this->db->query("SELECT COUNT(*) AS 'Over' FROM `Projects` Where County =('".$county."') AND (`Total_amount` > `Estimated_cost` )");
+        $arr = array();
+        foreach($totals->result() as $rw){
+            $arr[0]= $rw->Total;
+        }
+        foreach($query->result() as $rw){
+            $arr[1]= $rw->Over;
+        }
+        return $arr;
     }
 
 

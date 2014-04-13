@@ -105,6 +105,19 @@ class Analytics extends CI_Controller {
         }
     }
 
+    //function to get count of overbudget projects
+    public function overbudget_get(){
+        $county= $_POST['county'];
+        $info=$this->commons_model->over_budgets($county);
+
+        if($info){
+            print json_encode($info, JSON_NUMERIC_CHECK);
+        }
+        else{
+            echo 0;
+        }
+    }
+
 } //end controller..
 
 ?>
