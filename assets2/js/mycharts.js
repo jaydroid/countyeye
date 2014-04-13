@@ -209,3 +209,68 @@ function budget_chart(dt){
     });
 
 }//end draw chart function
+
+/*
+* Projects count per county
+* */
+
+function project_per_county_chart(dt){
+    var data =['Baringo','Bomet','Bungoma','Busia','Embu','Garissa','Homa Bay','Isiolo','Kajiado','Kakamega','Kericho','Kiambu',
+        'Kilifi','Kirinyaga','Kisii','Kisumu','Kitui','Kwale','Laikipia','Lamu','Machakos','Makueni','Mandera','Marakwet_Elgeyo','Marsabit','Meru','Migori','Mombasa','Muranga','Nairobi','Nakuru','Nandi','Narok','Nyamira','Nyandarua','Nyeri','Samburu','Siaya','Taita Taveta','Tana River','Tharaka Nithi','Trans Nzoia','Turkana','Uasin Gishu','Vihiga','Wajir','West Pokot'];
+
+    $('#county_projects').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Total Projects Per County'
+        },
+        subtitle: {
+            text: 'Source: Kenya Open Data'
+        },
+        xAxis: {
+            categories: data,
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Project Count',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' millions'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 100,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: '#FFFFFF',
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Count',
+            data: dt
+        }]
+    });
+}

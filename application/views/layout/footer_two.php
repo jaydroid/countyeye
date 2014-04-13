@@ -76,6 +76,7 @@
             sector_data_grub(frmData);
             mtfe_data_grub(frmData);
             project_budget_grub(frmData);
+            project_per_county();
         });
 
     });
@@ -115,6 +116,37 @@
             }
         });
     };
+
+
+
+    //Data get ajax calls;
+
+    //function to get total number of projects being undertaken per county
+    function project_per_county(){
+        $.ajax({
+            type: 'get',
+            url: '<?php echo('analytics/total_projects'); ?>',
+             //data: frmData,
+            dataType: 'json',
+            cache: false,
+            timeout:7000,
+            success: function (data){
+                //console.log(data);
+
+                var values = new Array();
+                for(var x =0; x <=46 ; x++){
+                  values[x] = parseInt(data[x]);
+                }
+                console.log(values);
+                project_per_county_chart(data);
+            },
+            complete: function (XMLHttpRequest,status){
+                //hide loader gif
+            }
+        });
+
+    }
+
     function mtfe_data_grub(frmData){
         $.ajax({
             type: 'post',
@@ -165,7 +197,7 @@
                 //$('#feeds').addClass('done').html(data).fadeIn('fast');
 //               console.log(data[0]);
 //
-               console.log(data[0],data[1],data[2],data[3],data[4],data[5],data[6]);
+//               console.log(data[0],data[1],data[2],data[3],data[4],data[5],data[6]);
                var dt= [data[0],data[1],data[2],data[3],data[4],data[5],data[6]];
                budget_chart(dt);
             },

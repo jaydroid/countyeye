@@ -71,10 +71,13 @@ class Commons_model extends CI_Model {
         $query= $this->db->query("SELECT `MTFE_Sector`, COUNT(*) AS 'Sector_Count' FROM `Projects` WHERE `County`= '".$county."' GROUP BY `MTFE_Sector`");
         return $query;
     }
-
     #get the budget totals per year for a county
     public function project_totals($county){
         $query =$this->db->query('SELECT SUM( P_one ) AS  "year1", SUM( P_two ) AS  "year2", SUM( P_three ) AS  "year3", SUM( P_four ) AS  "year4", SUM( P_five ) AS  "year5", SUM( P_six ) AS  "year6", SUM( P_seven ) AS  "year7" FROM projects WHERE `County` = "'.$county.'"');
+        return $query;
+    }
+    public function num_of_projects(){
+        $query=$this->db->query("SELECT  County , COUNT(*) AS  'Count' FROM  Projects  GROUP BY  County LIMIT 47");
         return $query;
     }
 
@@ -100,6 +103,9 @@ class Commons_model extends CI_Model {
 
 #----------------To be used---------------------------
 #query to get the total number of projects per county
-#SELECT  `County` , COUNT( * ) AS  "Count" FROM  `Projects`  GROUP BY  `County` LIMIT 471
+#SELECT  `County` , COUNT( * ) AS  "Count" FROM  `Projects`  GROUP BY  `County` LIMIT 47
 
+
+#query to get count of projects that went off budget
+#SELECT COUNT(*) AS Sum FROM `Projects` Where County =("Kiambu") AND (`Total_amount` > `Estimated_cost` )
 ?>

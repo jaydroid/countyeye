@@ -44,7 +44,6 @@ class Analytics extends CI_Controller {
 
     //mtfe_chart data get function
     public  function mtfe_count_get(){
-
         $county= $_POST['county'];
         $info=$this->commons_model->mtfe_count($county);
 
@@ -83,6 +82,23 @@ class Analytics extends CI_Controller {
                 $data[6]=$rw->year7;
             }
             echo (json_encode($data));
+        }
+        else{
+            echo 0;
+        }
+    }
+
+    //function get total per county
+    public function total_projects(){
+        $info=$this->commons_model->num_of_projects();
+
+        if($info->num_rows() > 0){
+            $data=array();
+            foreach($info->result() as $rw){
+                $row[0] = $rw->Count;
+                array_push($data,$row);
+            }
+             print json_encode($data,JSON_NUMERIC_CHECK);
         }
         else{
             echo 0;

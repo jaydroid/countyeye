@@ -148,6 +148,7 @@
                     <li><a href="#b" data-toggle="tab"><i class="icon icon-list"></i> MTFE Sector</a></li>
                     <li><a href="#c" data-toggle="tab"><i class="icon icon-money"></i> Project Budgets</a></li>
                     <li><a href="#d" data-toggle="tab"><i class="icon icon-time"></i> Projects Status</a></li>
+                    <li><a href="#e" data-toggle="tab"><i class="icon icon-tasks"></i> Projects per county</a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="a">
@@ -168,6 +169,11 @@
                     <div class="tab-pane" id="d">
                         <div class="col-md-6">
                             Project Status
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="e">
+                        <div class="col-md-6" id="county_projects"  style="min-width: 600px; height: 1000px; margin: 0 auto" >
+
                         </div>
                     </div>
                 </div>

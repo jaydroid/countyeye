@@ -17,7 +17,7 @@ class Data extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('commons_model'); //contains common functions
-        $this->load->model('data_model'); //contains data functions
+       // $this->load->model('data_model'); //contains data functions
     }
 
     //default function..
