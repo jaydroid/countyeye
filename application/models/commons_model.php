@@ -39,18 +39,17 @@ class Commons_model extends CI_Model {
 
 
     #--------------------------------------DATA SAVER FUNCTIONS---------------------------------------------
-    public function save($id,$user,$comment){
+    public function save($id,$user,$comment,$senti){
        //$query= $this->db->query('UPDATE TABLE `comment` ');
         if($id==""){
             return 0;
         }
         else{
-            $query=$this->db->query("INSERT INTO `comment` (`Comment`, `User_id`, `Project_id`) VALUES ('".$comment."', '".$user."','".$id."' )");
+            $query=$this->db->query("INSERT INTO `comment` (`Comment`, `User_id`, `Project_id`,`Sentiment`) VALUES ('".$comment."', '".$user."','".$id."','".$senti."' )");
             return $query;
         }
     }
     public function save_flag($userId,$projectId,$allegment,$comment){
-       //$query= $this->db->query('UPDATE TABLE `comment` ');
         if($userId==""){
             return 0;
         }

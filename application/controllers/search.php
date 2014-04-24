@@ -13,7 +13,9 @@ class Search extends CI_Controller {
         parent::__construct();
         $this->load->model('commons_model'); //contains common functions
         $this->load->library('Googlemaps');
-	}
+        include_once __DIR__ . '/../libraries/autoload.php';
+
+    }
 
 	//function to grab user input...search db.. and return results
 	public function index()
@@ -139,7 +141,21 @@ class Search extends CI_Controller {
         $comment= $_POST['comment'];
         $user=$_POST['user'];
         $id= $_POST['id'];
-        $data=$this->commons_model->save($id,$user,$comment);
+        $sentiment = new \PHPInsight\Sentiment();
+        // calculations:
+        $scores = $sentiment->score($comment);
+        $class = $sentiment->categorise($comment);
+        if($class=='pos'){
+            $senti="positive";
+        }
+        if($class=='neg'){
+            $senti="negative";
+        }
+        if($class=='neu'){
+            $senti="neutral";
+        }
+
+        $data=$this->commons_model->save($id,$user,$comment,$senti);
 
         #testing returned data
         if($data==1){
@@ -155,6 +171,7 @@ class Search extends CI_Controller {
         $comment = $_POST['reason'];
         $userId = $_POST['user'];
         $projectId = $_POST['id'];
+        //sentiment get
 
         $data=$this->commons_model->save_flag($userId,$projectId,$allegment,$comment);
 
