@@ -24,6 +24,7 @@ class Data extends CI_Controller {
     public function index(){
         $data['title']="CountyEye: Data View";
         $data['county'] = $this->commons_model->countyfetch();
+        $data['jina']=$this->session->userdata('name');
         $this->load->view('data',$data);
         $this->load->view('/layout/footer_two');
     }//end index function..

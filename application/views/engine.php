@@ -73,7 +73,14 @@
     <ul class="nav navbar-nav pull-right hidden-xs">
         <li class="dropdown">
             <a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">
-                Welcome Guest
+                <?php
+                if($jina){
+                    echo $jina;
+                }
+                else{
+                    echo ('Guest');
+                }
+                ?>
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">

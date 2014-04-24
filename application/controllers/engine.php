@@ -22,6 +22,7 @@ class Engine extends CI_Controller {
     }
     public function index(){
         $data['title']="CountyEye: Analytics View";
+        $data['jina']=$this->session->userdata('name');
         $data['county'] = $this->commons_model->countyfetch();
         $this->load->view('engine',$data);
         $this->load->view('/layout/footer_two');
