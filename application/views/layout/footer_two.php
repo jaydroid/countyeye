@@ -79,9 +79,16 @@
             overbudget_grub(frmData);
             project_per_county();
         });
+
+
         $('#visualize_two').click(function(){
             var frmData=$('form').serialize();
             user_comments(frmData);
+        });
+
+        $('#senti').click(function(){
+            var frmData=$('form').serialize();
+            sentiment_payload(frmData);
         });
 
     });
@@ -230,7 +237,6 @@
             timeout:7000,
             success: function (data){
                 var parsedData = JSON.parse(data);
-//                console.log(parsedData.length);
                 drawTable(parsedData);
             },
             complete: function (XMLHttpRequest,status){
@@ -238,6 +244,24 @@
             }
         });
     };
+
+    function sentiment_payload(frmData){
+        $.ajax({
+            type: 'post',
+            url: '<?php echo('engine/sentiment'); ?>',
+            data: frmData,
+            cache: false,
+            timeout:7000,
+            success: function (data){
+                $('#sentiment').empty();
+                $('#sentiment').append(data);
+            },
+            complete: function (XMLHttpRequest,status){
+                //removed loader
+            }
+        });
+    };
+
 
     //----------------------------------------Function to load project info onto DOM-------------------
     function load_info(id){

@@ -14,7 +14,7 @@
             <div class="awidget-body " style="height:460px; width:100%; padding:0px;">
                 <?php
 
-                echo md5('test');
+               //print_r($sentiments);
 
                 ?>
             </div>

@@ -1,5 +1,5 @@
 <!--DOCTYPE HTML-->
-<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <title><?php echo $title; ?></title>
     <?php include 'layout/link_main.php'; ?>
@@ -46,6 +46,13 @@
         .tab-pane{
             padding-top: 2%;
         }
+        pre{
+            font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+            padding: 10px;
+            font-size: 0.9em;
+            max-height: 400px;
+            overflow-y: auto;
+        }
     </style>
 </head>
 
@@ -82,7 +89,7 @@
 <div id="sidebar-nav">
     <ul id="dashboard-menu">
         <li>
-            <a class="dropdown-toggle" href="<?php echo ('search'); ?>">
+            <a class="dropdown-toggle" href="#" onclick="window.history.back()">
                 <i class="icon-map-marker"></i>
                 <span>Map Filters</span>
                 <i class="icon-chevron-down"></i>
@@ -98,22 +105,22 @@
         </li>
 
         <li>
-            <a href="<?php echo ('analytics'); ?>">
+            <a href="#">
                 <i class="icon-signal"></i>
                 <span>Analytics</span>
             </a>
         </li>
-        <li  class="active">
-            <div class="pointer">
-                <div class="arrow"></div>
-                <div class="arrow_border"></div>
-            </div>
+        <li>
             <a href="<?php echo ('data'); ?>">
                 <i class="icon-hdd"></i>
                 <span>App Data</span>
             </a>
         </li>
-        <li>
+        <li class="active">
+            <div class="pointer">
+                <div class="arrow"></div>
+                <div class="arrow_border"></div>
+            </div>
             <a href="<?php echo ('engine'); ?>">
                 <i class="icon-cogs"></i>
                 <span>IR Engine</span>
@@ -130,58 +137,46 @@
         <div class="row stats-row">
             <div class="col-md-5 col-sm-3 stat">
                 <div class="data">
-                    <span class="number" style="font-size: 16px">APPLICATION DATA PAGE</span>
+                    <span class="number" style="font-size: 16px">Sentimental Analysis Engine</span>
                 </div>
-                <span class="date">See App Data</span>
+                <span class="date">PHP IR</span>
             </div>
         </div><!--  end row stats-->
     </div>
-    <!-- end main-stats-->
     <div class="row" style="background: #fafafa; margin: auto; margin-top: 0; padding: 2%; padding-top: 4%; border-radius: 5px; width: 100%;">
         <div class="col-mod-6 padded" style=" ">
             <form action="#" class="form-horizontal padded" method="post">
                 <div class="input-group form col-md-8">
-                    <select id="county" name="county" class="form-control">
-                        <?php foreach ($county as $row){?>
-                            <option  value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
-                        <?php } ?>
-                    </select><span class="input-group-btn"><input class="btn btn-info" id="visualize_two" type="button" value="Visualize"></span>
-
+<!--                    <input type="text" class="form-control"/><span class="input-group-btn"><input class="btn btn-success" id="senti" type="button" value="POST"></span>-->
+                    <textarea class="form-control" name="sentiment" cols="10" rows="5"></textarea>
+                    <br/><br/>
+                    <button class="btn btn-info" id="senti" type="button" value="Submit"><i class="icon-cog"></i> Analyze</button> &nbsp
+                    <button class="btn btn-success" type="reset"><i class="icon-pencil"></i> Clear</button>
                 </div>
             </form>
         </div>
     </div>
-    <div class="col-mod-12 padded" style="padding: 2%;">
-        <br/> <br/>
-        <div class="tabbable tabs">
-            <ul class="nav nav-tabs">
-                <li class="active"><a href="#a" data-toggle="tab"><i class="icon icon-tags"></i> County Sentiments</a></li>
-                <li><a href="#b" data-toggle="tab"><i class="icon icon-list"></i> Flagged Projects</a></li>
-                <li><a href="#c" data-toggle="tab"><i class="icon icon-hdd"></i>  Downloads</a></li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane active" id="a">
-                    <div id="senti_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
+        <div class="col-md-12" style="margin-top: 4%;">
+            <div class="panel panel-default" style="width:50%;margin-left: auto; margin-right: auto">
+                <div class="panel-heading"> Sentiment Payload</div>
+                <div class="panel-body"">
+<pre>
+<code id="sentiment" style="color: red">
 
-                    </div>
-                    <div id="comments"></div>
+</code>
+</pre>
                 </div>
-                <div class="tab-pane active" id="b">
-                    <div id="sector_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
-
-                    </div>
-                </div>
-                <div class="tab-pane active" id="c">
-                    <div id="sector_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
-
-                    </div>
-                </div>
-
             </div>
-
-        </div>
     </div>
 
+    <!-- /tabs -->
+</div>
+
+<!-- end main-stats-->
+
+</div>
 <!-- end main container -->
+
+
 
 </body>

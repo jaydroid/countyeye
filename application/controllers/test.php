@@ -18,20 +18,38 @@ class Test extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->model('commons_model'); //contains common functions
+//        $this->load->library('/lib/insight/Sentiment');
+       include_once __DIR__ . '/../libraries/autoload.php';
     }
 
 
     public function  index(){
-        $sector="health";
-        $name="Marakwet_Elgeyo";
-        $jina=mysql_real_escape_string($name);
+//        $sector="health";
+//        $name="Marakwet_Elgeyo";
+//        $jina=mysql_real_escape_string($name);
+//
+//        $refines= $this->commons_model->refine($sector,$jina);
+//
+//        foreach ($refines->result() as $row )
+//        {
+//            echo $row->Coordinates. "<br>";
+//        }
+        $string="I hate school";
+//        require_once __DIR__ . '/../autoload.php';
+        $sentiment = new \PHPInsight\Sentiment();
 
-        $refines= $this->commons_model->refine($sector,$jina);
+#foreach ($strings as $string) {
 
-        foreach ($refines->result() as $row )
-        {
-            echo $row->Coordinates. "<br>";
-        }
+        // calculations:
+        $scores = $sentiment->score($string);
+        $class = $sentiment->categorise($string);
+
+        // output:
+        echo "String: $string\n";
+        echo "Dominant: $class, scores: ";
+        print_r($scores);
+        echo "\n";
+
         $this->load->view('test');
     }//end index function
 }

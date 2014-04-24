@@ -170,6 +170,12 @@
                 <span>App Data</span>
             </a>
         </li>
+        <li>
+            <a href="<?php echo ('engine'); ?>">
+                <i class="icon-cogs"></i>
+                <span>IR Engine</span>
+            </a>
+        </li>
     </ul>
 </div>
 <!-- end sidebar -->
