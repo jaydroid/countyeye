@@ -84,6 +84,7 @@
         $('#visualize_two').click(function(){
             var frmData=$('form').serialize();
             user_comments(frmData);
+            flags_payload(frmData);
         });
 
         $('#senti').click(function(){
@@ -262,6 +263,25 @@
         });
     };
 
+    function flags_payload(frmData){
+        $.ajax({
+            type: 'post',
+            url: '<?php echo('data/grub_flags'); ?>',
+            data: frmData,
+            cache: false,
+            timeout:7000,
+            success: function (data){
+                var parsedData = JSON.parse(data);
+                draw_flag_tbl(parsedData);
+            },
+            complete: function (XMLHttpRequest,status){
+                //removed loader
+            }
+        });
+    };
+
+
+
 
     //----------------------------------------Function to load project info onto DOM-------------------
     function load_info(id){
@@ -322,15 +342,45 @@
             else{
                 html += '<td>' + data[i][j] + '</td>';
             }
-        }
-        html += "</tr>";
+    }
+    html += "</tr>";
     }
     html += '</tbody><tfoot><tr></tr></tfoot></table>';
     var data = new Array();
     data=[["Negative",neg],["Positive",pos],["Neutral",neu]];
     sentiments(data);
     $(html).appendTo('#comments');
-}
+    }//end draw table..
+
+    function draw_flag_tbl(data){
+        $('#flags').empty();// clear any other tables from div
+        var html = '<table class="table table-hover" style="font-size: 11px"><thead><tr><td>Project Name</td><td>County</td><td>Priority</td></thead><tbody>';
+        for (var i = 0, len = data.length; i < len; ++i) {
+            html += '<tr>';
+            for (var j = 0, rowLen = data[i].length; j < rowLen; ++j ) {
+                if(j==2){
+                    if(data[i][j]=="low"){
+                        html += '<td><span class="label label-success">' + data[i][j] + '</span></td>';
+                    }
+                    else if(data[i][j]=="medium"){
+                        html += '<td><span class="label label-warning">' + data[i][j] + '</span></td>';
+                    }
+                    else if(data[i][j]=="high")                {
+                        html += '<td><span class="label label-danger">' + data[i][j] + '</span></td>';
+                    }
+                    else{
+                        //do nothing
+                    }
+                }
+                else{
+                    html += '<td>' + data[i][j] + '</td>';
+                }
+            }
+            html += "</tr>";
+        }
+        html += '</tbody><tfoot><tr></tr></tfoot></table>';
+        $(html).appendTo('#flags');
+    }
 
 </script>
 

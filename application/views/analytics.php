@@ -160,7 +160,7 @@
                     <li class="active"><a href="#a" data-toggle="tab"><i class="icon icon-tasks"></i> Projects per county</a></li>
                     <li><a href="#b" data-toggle="tab"><i class="icon icon-list"></i> MTFE Sector</a></li>
                     <li><a href="#c" data-toggle="tab"><i class="icon icon-money"></i> Project Budgets</a></li>
-                    <li><a href="#d" data-toggle="tab"><i class="icon icon-time"></i> Projects Status</a></li>
+<!--                    <li><a href="#d" data-toggle="tab"><i class="icon icon-time"></i> Projects Status</a></li>-->
                     <li><a href="#e" data-toggle="tab"><i class="icon icon-tags"></i> Sectors </a></li>
                     <li><a href="#f" data-toggle="tab"><i class="icon icon-money"></i> Budgeting</a></li>
                 </ul>
@@ -195,16 +195,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="d">
-                        <div class="panel panel-default">
-                            <div class="panel-heading"> Projects Status</div>
-                            <div class="panel-body" >
-                                <div   style="min-width: 810px; height: 400px; margin: 0 auto">
-                                    Project Status
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div class="tab-pane" id="d">-->
+<!--                        <div class="panel panel-default">-->
+<!--                            <div class="panel-heading"> Projects Status</div>-->
+<!--                            <div class="panel-body" >-->
+<!--                                <div   style="min-width: 810px; height: 400px; margin: 0 auto">-->
+<!--                                    Project Status-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="tab-pane" id="e">
                         <div class="panel panel-default">
                             <div class="panel-heading"> Projects Sector Distribution</div>

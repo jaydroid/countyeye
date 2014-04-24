@@ -166,25 +166,36 @@ class Search extends CI_Controller {
         }
     } //end save function
 
+
     public  function  save_flag(){
         $allegment = $_POST['allegement'];
         $comment = $_POST['reason'];
         $userId = $_POST['user'];
         $projectId = $_POST['id'];
+        $user_level=1;
         //sentiment get
-
         $data=$this->commons_model->save_flag($userId,$projectId,$allegment,$comment);
+        //calculate the score of flags and store..
+
+        if($user_level==2){
+            $score=20;
+        }
+        else if($user_level!=2){
+            $score=2;
+        }
+        //store..
+        $data_src=$this->commons_model->save_score($projectId,$score,$user_level);
+
 
         #testing returned data
-        if($data==1){
-            echo "<i class='icon-ok-sign'></i> "."Thank you for your exercising your right";
+        if($data==1 || $data_src==1){
+            echo "<i class='icon-ok-sign'></i> "."Thank you for your nobility";
         }
-        else if($data !=1){
+        else if($data!=1 ||$data_src!=1){
             echo "<i class='icon-remove-circle'></i> "."An Error occured: Please Try Again";
         }
 
     } //end save flag
-
 
 } //end controller..
 

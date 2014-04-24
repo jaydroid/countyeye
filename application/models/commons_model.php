@@ -65,6 +65,38 @@ class Commons_model extends CI_Model {
         }
     }
 
+    public  function save_score($projectId,$score,$user_level){
+        $score_get="SELECT `Score` FROM  `scores` WHERE  `Id` = '".$projectId."' ";
+        $count=$this->db->query($score_get);
+        $cc=$count->result();
+        if($cc){
+            foreach($cc as $c){
+                $ttl=$c->County;
+            }
+            $new= ($ttl + $score); //get new score
+            if($new>30){
+                $pri="high";
+            }
+            elseif($new<30 && $new>=10){
+                $pri="medium";
+            }
+            elseif($new<10){
+                $pri="low";
+            }
+//            UPDATE  `county`.`scores` SET  `Score` =  '1',`Priority` =  'mediu' WHERE  `P_Id` ='".$projectId."';
+//            $query=$this->db->query("UPDATE  `scores` SET  `Score` =  '".$new."' WHERE  `P_Id` ='".$projectId."'");
+            $query=$this->db->query("UPDATE `scores` SET  `Score` =  '".$new."',`Priority` =  '".$pri."' WHERE  `P_Id` ='".$projectId."'");
+        }
+        else{
+            if($user_level==2){
+                $pri="medium";}
+            elseif($user_level!=2){
+                $pri="low";}
+            $query=$this->db->query("INSERT INTO `scores` ( `P_Id`, `Score`,`Priority`) VALUES ('".$projectId."','".$score."','".$pri."')");
+        }
+        return $query;
+    }
+
     #-------------------------------------PROJECT ANALYTICS FUNCTIONS----------------------------------------
     #Get count of projects per sector
     public function sector_count($county){
@@ -105,6 +137,10 @@ class Commons_model extends CI_Model {
     //query to get user comments per county
     public  function comments($county){
         $query=$this->db->query('SELECT Project_name, County, Date, COMMENT , Sentiment FROM COMMENT INNER JOIN projects ON comment.Project_id = projects.Id AND County =  "'.$county.'"');
+        return $query;
+    }
+    public function flagged($county){
+        $query=$this->db->query("SELECT Project_name, County, Priority FROM scores INNER JOIN projects ON scores.P_id = projects.Id AND County ='".$county."' ORDER BY Priority ASC");
         return $query;
     }
 

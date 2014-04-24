@@ -167,9 +167,8 @@
                     <div id="comments"></div>
                 </div>
                 <div class="tab-pane active" id="b">
-                    <div id="sector_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
+                    <div id="flags"></div>
 
-                    </div>
                 </div>
                 <div class="tab-pane active" id="c">
                     <div id="sector_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
