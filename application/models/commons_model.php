@@ -96,9 +96,14 @@ class Commons_model extends CI_Model {
         return $arr;
     }
 
+    #-----------------------------------------------APP DATA FUNCTIONS---------------------------------------------
+    //query to get user comments per county
+    public  function comments($county){
+        $query=$this->db->query('SELECT Project_name, County, Date, COMMENT , Sentiment FROM COMMENT INNER JOIN projects ON comment.Project_id = projects.Id AND County =  "'.$county.'"');
+        return $query;
+    }
 
 }// end commons_model
-
 
 
 #---------------------------Queries-------------------------------------------------------------------------------------------

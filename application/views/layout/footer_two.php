@@ -79,6 +79,10 @@
             overbudget_grub(frmData);
             project_per_county();
         });
+        $('#visualize_two').click(function(){
+            var frmData=$('form').serialize();
+            user_comments(frmData);
+        });
 
     });
     //ajax submit function to save data
@@ -209,9 +213,25 @@
             timeout:7000,
             success: function (data){
                 var details = data.split(",");
-//                var dt= [details[0],details[1]];
-
                 budget_donut_chart(details);
+            },
+            complete: function (XMLHttpRequest,status){
+                //removed loader
+            }
+        });
+    };
+
+    function user_comments(frmData){
+        $.ajax({
+            type: 'post',
+            url: '<?php echo('data/comment_get'); ?>',
+            data: frmData,
+            cache: false,
+            timeout:7000,
+            success: function (data){
+                var parsedData = JSON.parse(data);
+//                console.log(parsedData.length);
+                drawTable(parsedData);
             },
             complete: function (XMLHttpRequest,status){
                 //removed loader
@@ -246,6 +266,47 @@
         $('#p_id_user2').val(<?php echo ($this->session->userdata('id'));?>);
         $('#p_details').fadeIn(); //show the project details div
     }//end load info function
+
+
+function drawTable(data){
+    $('#comments').empty();// clear any other tables from div
+    var html = '<table class="table table-hover" style="font-size: 11px"><thead><tr><td>Name</td><td>County</td><td>Date</td><td>Comment</td><td>Sentiment</td></tr></thead><tbody>';
+    var pos=0;
+    var neg=0;
+    var neu=0;
+
+    for (var i = 0, len = data.length; i < len; ++i) {
+        html += '<tr>';
+        for (var j = 0, rowLen = data[i].length; j < rowLen; ++j ) {
+            if(j==4){
+                if(data[i][j]=="positive"){
+                    html += '<td><span class="label label-success">' + data[i][j] + '</span></td>';
+                    pos++;
+                }
+                else if(data[i][j]=="negative"){
+                    html += '<td><span class="label label-danger">' + data[i][j] + '</span></td>';
+                    neg++;
+                }
+                else if(data[i][j]=="neutral")                {
+                    html += '<td><span class="label label-default">' + data[i][j] + '</span></td>';
+                    neu++;
+                }
+                else{
+                    //do nothing
+                }
+            }
+            else{
+                html += '<td>' + data[i][j] + '</td>';
+            }
+        }
+        html += "</tr>";
+    }
+    html += '</tbody><tfoot><tr></tr></tfoot></table>';
+    var data = new Array();
+    data=[["Negative",neg],["Positive",pos],["Neutral",neu]];
+    sentiments(data);
+    $(html).appendTo('#comments');
+}
 
 </script>
 

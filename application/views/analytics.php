@@ -36,8 +36,15 @@
             padding: 10px 40px;
         }
         .nav-tabs > li > a{
-            border-radius: 0px;
-            color: #71B8EE;
+            /*border: 2px solid #71B8EE;*/
+            color: #fff;
+            background: #71B8EE;
+        }
+        .padded{
+        margin-left: 15%;
+        }
+        .tab-pane{
+            padding-top: 2%;
         }
     </style>
 </head>
@@ -123,10 +130,10 @@
                 </div>
             </div><!--  end row stats-->
         </div>
-        <div class="row" style="background: #fafafa; margin: auto; margin-top: 2%; padding: 2%; border-radius: 5px; width: 60%;">
+        <div class="row" style="background: #fafafa; margin: auto; margin-top: 0; padding: 2%; padding-top: 4%; border-radius: 5px; width: 100%;">
             <div class="col-mod-6 padded" style=" ">
                 <form action="#" class="form-horizontal padded" method="post">
-                    <div class="input-group form">
+                    <div class="input-group form col-md-8">
                         <select id="county" name="county" class="form-control">
                             <?php foreach ($county as $row){?>
                                 <option  value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
@@ -139,48 +146,77 @@
             </div>
         </div>
 
-        <div class="col-md-12 padded">
+        <div class="col-md-9 padded" >
             <br/><br/><br/>
             <!-- tabs left -->
-            <div class="tabbable tabs-left">
+            <div class="tabbable tabs" >
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#a" data-toggle="tab"><i class="icon icon-tags"></i> Sectors</a></li>
+                    <li class="active"><a href="#a" data-toggle="tab"><i class="icon icon-tasks"></i> Projects per county</a></li>
                     <li><a href="#b" data-toggle="tab"><i class="icon icon-list"></i> MTFE Sector</a></li>
                     <li><a href="#c" data-toggle="tab"><i class="icon icon-money"></i> Project Budgets</a></li>
                     <li><a href="#d" data-toggle="tab"><i class="icon icon-time"></i> Projects Status</a></li>
-                    <li><a href="#e" data-toggle="tab"><i class="icon icon-tasks"></i> Projects per county</a></li>
+                    <li><a href="#e" data-toggle="tab"><i class="icon icon-tags"></i> Sectors </a></li>
                     <li><a href="#f" data-toggle="tab"><i class="icon icon-money"></i> Budgeting</a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="a">
-                        <div id="sector_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> Projects Per county</div>
+                                <div class="panel-body"">
+                                    <div class="col-md-6" id="county_projects"  style="min-width: 800px; height: 1000px; margin: 0 auto" >
 
+                                    </div>
+                                </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="b">
-                        <div class="col-md-8" id="mtfe_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> MTFE_Sectors Project distribution</div>
+                            <div class="panel-body" >
+                                <div id="mtfe_pie"  style="width: 810px; height: 400px; margin: 0 auto">
 
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="c">
-                        <div class="col-md-8" id="budget_chart">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> Budget Charts</div>
+                            <div class="panel-body" >
+                                <div id="budget_chart" style="width: 810px; height: 400px; margin: 0 auto">
 
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="d">
-                        <div class="col-md-6">
-                            Project Status
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> Projects Status</div>
+                            <div class="panel-body" >
+                                <div   style="min-width: 810px; height: 400px; margin: 0 auto">
+                                    Project Status
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="e">
-                        <div class="col-md-6" id="county_projects"  style="min-width: 600px; height: 1000px; margin: 0 auto" >
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> Projects Sector Distribution</div>
+                            <div class="panel-body" >
+                                <div id="sector_pie"  style="min-width: 810px; height: 400px; margin: 0 auto">
 
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                     <div class="tab-pane" id="f">
-                        <div class="col-md-6" id="project_budgets"  style="min-width: 310px; height: 400px; margin: 0 auto" >
+                        <div class="panel panel-default">
+                            <div class="panel-heading"> Projects budgets</div>
+                            <div class="panel-body" >
+                                <div  id="project_budgets"  style="min-width: 810px; height: 400px; margin: 0 auto" >
 
+                                </div>
+                            </div>
                         </div>
                     </div>
 

@@ -36,8 +36,15 @@
             padding: 10px 40px;
         }
         .nav-tabs > li > a{
-            border-radius: 0px;
-            color: #71B8EE;
+            /*border: 2px solid #71B8EE;*/
+            color: #fff;
+            background: #71B8EE;
+        }
+        .padded{
+            margin-left: 15%;
+        }
+        .tab-pane{
+            padding-top: 2%;
         }
     </style>
 </head>
@@ -123,9 +130,52 @@
             </div>
         </div><!--  end row stats-->
     </div>
-
     <!-- end main-stats-->
-</div>
+    <div class="row" style="background: #fafafa; margin: auto; margin-top: 0; padding: 2%; padding-top: 4%; border-radius: 5px; width: 100%;">
+        <div class="col-mod-6 padded" style=" ">
+            <form action="#" class="form-horizontal padded" method="post">
+                <div class="input-group form col-md-8">
+                    <select id="county" name="county" class="form-control">
+                        <?php foreach ($county as $row){?>
+                            <option  value="<?php echo $row->name; ?>"><?php echo $row->name; ?></option>
+                        <?php } ?>
+                    </select><span class="input-group-btn"><input class="btn btn-info" id="visualize_two" type="button" value="Visualize"></span>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-mod-12 padded" style="padding: 2%;">
+        <br/> <br/>
+        <div class="tabbable tabs">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#a" data-toggle="tab"><i class="icon icon-tags"></i> County Sentiments</a></li>
+                <li><a href="#b" data-toggle="tab"><i class="icon icon-list"></i> Flagged Projects</a></li>
+                <li><a href="#c" data-toggle="tab"><i class="icon icon-hdd"></i>  Downloads</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="a">
+                    <div id="senti_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
+
+                    </div>
+                    <div id="comments"></div>
+                </div>
+                <div class="tab-pane active" id="b">
+                    <div id="sector_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
+
+                    </div>
+                </div>
+                <div class="tab-pane active" id="c">
+                    <div id="sector_pie" class="col-md-9" style="min-width: 310px; height: 400px; margin: 0 auto">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
 <!-- end main container -->
 
 </body>

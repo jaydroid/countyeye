@@ -156,9 +156,9 @@ function budget_chart(dt){
 
     $('#budget_chart').highcharts({
 
-//        chart: {
-//            type: 'column'
-//        },
+        chart: {
+            type: 'column'
+        },
         title: {
             text: 'Total Project Budget (7Yrs)',
             x: 20
@@ -245,7 +245,7 @@ function project_per_county_chart(dt){
             }
         },
         tooltip: {
-            valueSuffix: ' millions'
+            valueSuffix: ''
         },
         plotOptions: {
             bar: {
@@ -324,6 +324,41 @@ function budget_donut_chart(dt){
                 ['On budget', a],
                 ['Over budget',  b]
             ]
+        }]
+    });
+}
+
+//function to draw comment sentiments
+function sentiments(data){
+
+    $('#senti_pie').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Sentimental Analysis'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#000000',
+                    connectorColor: '#000000',
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Sector',
+            data: data
         }]
     });
 }

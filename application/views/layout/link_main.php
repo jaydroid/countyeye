@@ -18,7 +18,7 @@
 <!-- libraries -->
 <link href="<?php echo base_url(); ?>assets2/css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url(); ?>assets2/css/lib/font-awesome.css" type="text/css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets2/css/lib/morris.css" type="text/css" rel="stylesheet">
+<!--<link href="--><?php //echo base_url(); ?><!--assets2/css/lib/morris.css" type="text/css" rel="stylesheet">-->
 
 <!-- this page specific styles -->
 
