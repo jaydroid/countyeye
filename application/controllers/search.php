@@ -160,10 +160,10 @@ class Search extends CI_Controller {
 
         #testing returned data
         if($data==1){
-            echo "<i class='icon-ok-sign'></i>"."Thank you for your exercising your right";
+            echo "<i class='icon-ok-sign'></i> "."Thank you for your exercising your right";
         }
         else if($data !=1){
-            echo "<i class='icon-remove-circle'></i>"."An Error occured: Please Try Again";
+            echo "<i class='icon-remove-circle'></i> "."An Error occured: Please Try Again";
         }
 
     } //end save flag

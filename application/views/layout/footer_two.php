@@ -239,7 +239,7 @@
         });
     };
 
-    //----------------------------------------Function to load project info onto DOM
+    //----------------------------------------Function to load project info onto DOM-------------------
     function load_info(id){
 
         var details = id.split("|");
@@ -267,8 +267,8 @@
         $('#p_details').fadeIn(); //show the project details div
     }//end load info function
 
-
-function drawTable(data){
+    //----------------------------------------Table to draw comments table and sentiment graph---------
+    function drawTable(data){
     $('#comments').empty();// clear any other tables from div
     var html = '<table class="table table-hover" style="font-size: 11px"><thead><tr><td>Name</td><td>County</td><td>Date</td><td>Comment</td><td>Sentiment</td></tr></thead><tbody>';
     var pos=0;

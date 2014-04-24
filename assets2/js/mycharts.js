@@ -24,20 +24,20 @@ function drawchart(dt){
             type: 'column'
         },
         title: {
-            text: 'Project Budget (7Yrs)'
+            text: 'Project Budget (2003 - 2010)'
         },
         subtitle: {
             text: 'Source: Kenya Open Data'
         },
         xAxis: {
             categories: [
-                '2003-2004',
-                '2004-2005',
-                '2005-2006',
-                '2006-2007',
-                '2007-2008',
-                '2008-2009',
-                '2009-2010'
+                '03-04',
+                '04-05',
+                '05-06',
+                '06-07',
+                '07-08',
+                '08-09',
+                '09-10'
             ]
         },
         yAxis: {

@@ -55,7 +55,13 @@ class Commons_model extends CI_Model {
             return 0;
         }
         else{
-            $query=$this->db->query("INSERT INTO `flags` ( `Reason`, `Comment`, `Project_Id`, `User_id`) VALUES ('".$allegment."','".$comment."','".$projectId."','".$userId."')");
+            $county_get="SELECT `County` FROM  `projects` WHERE  `Id` = '".$projectId."' ";
+            $county=$this->db->query($county_get);
+            $cc=$county->result();
+            foreach($cc as $c){
+                $final=$c->County;
+            }
+            $query=$this->db->query("INSERT INTO `flags` ( `Reason`, `Comment`, `Project_Id`, `County`, `User_id`) VALUES ('".$allegment."','".$comment."','".$projectId."','".$final."','".$userId."')");
             return $query;
         }
     }
